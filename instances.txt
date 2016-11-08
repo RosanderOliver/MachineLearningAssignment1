@@ -1,0 +1,3 @@
+True/Length=3/Gills=No/Beak=Yes/Teeth=Many
+True/Length=4/Gills=No/Beak=Yes/Teeth=Many
+True/Lenght=3/Gills=No/Beak=Yes/Teeth=Few

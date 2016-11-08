@@ -1,10 +1,27 @@
-from classes import Attribute
+from classes import Attribute, Instance
 
 def main():
 	#Array of class
-	currentLogic = Attribute("Movie", False)
+	instances = []
+	
+	#Read file and append instances to instance list
+	file = open('instances.txt')
+	for line in file:
+		token = line.split("/")
+		ins = Instance(token[0])
+		
+		for i in range(1,len(token)):
+			attrToken = token[i].split("=")
+			attr = Attribute(attrToken[0], attrToken[1])
+			ins.addAttribute(attr)	
+		
+		instances.append(ins)
+	
+	expression = instances[0]
+	instances.pop(0)
+	for i in instances:
+		expression.LGG(i)
 
-	print currentLogic
 	return 0
 
 
