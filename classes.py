@@ -15,9 +15,26 @@ class Instance:
 		self.attributes.append(attr)  
 
 	def __str__(self):
-		st = str(self.case) + "; "
+		st = ""
 		for at in self.attributes:
-			st += str(at) + " "
+			if at != self.attributes[len(self.attributes)-1]:
+				st += str(at) + " AND "
+			else:
+				st += str(at)
 		return st
-	def LGG:
-		return 0
+
+	def remove(self, attr):
+		self.attributes.remove(attr)
+
+
+def LGGConj(gen, ins):
+	#Do algorithm 4.2 AND 4.3
+	
+	for i in ins:
+		for x in i.attributes:
+			for g in gen.attributes:
+				if (g.expression == x.expression) and (g.value != x.value):
+					#remove expressions from g
+					gen.remove(g)
+
+	return gen

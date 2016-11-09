@@ -1,4 +1,4 @@
-from classes import Attribute, Instance
+from classes import Attribute, Instance, LGGConj
 
 def main():
 	#Array of class
@@ -19,9 +19,10 @@ def main():
 	
 	expression = instances[0]
 	instances.pop(0)
-	for i in instances:
-		expression.LGG(i)
 
+	expression = LGGConj(expression, instances)	
+
+	print "Least general generalisation of set using LGG-Conj algorithm (4.2): " + str(expression)
 	return 0
 
 
