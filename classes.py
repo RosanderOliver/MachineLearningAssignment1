@@ -30,11 +30,10 @@ class Instance:
 def LGGConj(gen, ins):
 	#Do algorithm 4.2 AND 4.3
 	
-	for i in ins:
-		for x in i.attributes:
-			for g in gen.attributes:
-				if (g.expression == x.expression) and (g.value != x.value):
-					#remove expressions from g
-					gen.remove(g)
-
+	for x in ins.attributes:
+		for g in gen.attributes:
+			if (g.expression == x.expression) and (g.value != x.value):
+				#remove expressions from g
+				gen.remove(g)
 	return gen
+

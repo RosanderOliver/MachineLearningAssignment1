@@ -20,7 +20,8 @@ def main():
 	expression = instances[0]
 	instances.pop(0)
 
-	expression = LGGConj(expression, instances)	
+	for ins in instances:
+		expression = LGGConj(expression, ins)	
 
 	print "Least general generalisation of set using LGG-Conj algorithm (4.2): " + str(expression)
 	return 0
