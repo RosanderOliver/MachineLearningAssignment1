@@ -1,3 +1,0 @@
-True/Ambition=high/Programming Experience=medium/English language skills=medium/Creative=yes/Meticulous=yes
-True/Ambition=medium/Programming Experience=high/English language skills=medium/Creative=yes/Meticulous=yes
-True/Ambition=medium/Programming Experience=medium/English language skills=high/Creative=yes/Meticulous=yes
