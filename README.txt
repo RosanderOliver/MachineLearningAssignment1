@@ -1,1 +1,1 @@
-Running the program: pyhton main.py
+Running the program: python main.py
