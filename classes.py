@@ -1,10 +1,17 @@
 class Attribute:
 	def __init__(self, exp, va):
+		self.value = []
 		self.expression = exp
-		self.value = va
+		self.value.append(va.rstrip())
 
 	def __str__(self):
 		return self.expression + "=" + str(self.value) 
+	
+	def addValue(self, nv):
+		exists = nv[0] in self.value
+		if not exists:
+			self.value.append(nv[0])		
+
 
 class Instance:
 	def __init__(self, ca):
@@ -37,3 +44,10 @@ def LGGConj(gen, ins):
 				gen.remove(g)
 	return gen
 
+def LGGConjID(gen, ins):
+	for x in range(0,len(gen.attributes)-1):
+		if (gen.attributes[x].expression == ins.attributes[x].expression) \
+		and gen.attributes[x].value != ins.attributes[x].value:
+			gen.attributes[x].addValue(ins.attributes[x].value)
+			print "Added value"
+	return gen
